@@ -7,6 +7,7 @@
     color: #ffffff;
     font-family: "Times New Roman", serif;
     margin: 30px;
+    font-weight: bold;
   }
   h1 {
     font-size: 50px;
@@ -29,13 +30,27 @@
   }
   #dates {
     transform: scaleX(.75);
-    transform-origin: left;
+    transform-origin: right;
     line-height: .8;
-    font-size: 8vmin;
+    font-size: 7vmin;
+    text-align: right;
     position: absolute;
     bottom: 30px;
-    left: 30px;
+    right: 30px;
   }
+
+  #info {
+    transform: scaleX(.9);
+    transform-origin: left;
+    line-height: .9;
+    font-size: 3vmin;
+    position: absolute;
+    text-align: left;
+    left: 30px;
+    top: 50vmin;
+    width: 50vmin;
+  }
+
   a {
     text-decoration: none;
   }
@@ -76,6 +91,11 @@
       <p><a href="https://www.eventbrite.com/e/onx-june-showcase-2023-tickets-643063338757">JUNE 7, 2023. 7PM</a></p>
       <p><a href="https://www.eventbrite.com/e/onx-june-showcase-2023-tickets-643063338757">JUNE 9, 2023. 1PM</a></p>
       <p><a href="https://www.eventbrite.com/e/onx-june-showcase-2023-tickets-643063338757">JUNE 11, 2023. 6PM</a></p>
+    </div>
+    <div id = "info">
+      <p>Kinetic Diffusion is a performance and interactive installation that builds on the rich history of dancers interacting with machines.</p>
+      <p>It features real-time AI generation of a solo dancer captured with a camera.</p>
+      <p>Prompts sourced from the installation guide the projections, creating a unique experience for each performance.</p>
     </div>
   </div>
 </body>
