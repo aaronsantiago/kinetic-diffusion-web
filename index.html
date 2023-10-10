@@ -1,103 +1,216 @@
 <html>
+
 <head>
   <title>KINETIC DIFFUSION</title>
-<style>
-  body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: "Times New Roman", serif;
-    margin: 30px;
-    font-weight: bold;
-  }
-  h1 {
-    font-size: 50px;
-    margin: 0;
-    font-size: 20vmin;
-    transform: scaleX(.75);
-    transform-origin: left;
-    width: 100%;
-    line-height: .8;
-  }
-  h2 {
-    font-size: 50px;
-    margin: 0;
-    font-size: 8vmin;
-    transform: scaleX(.75);
-    transform-origin: right;
-    width: 100%;
-    text-align: right;
-    line-height: .8;
-  }
-  #dates {
-    transform: scaleX(.75);
-    transform-origin: right;
-    line-height: .4;
-    font-size: 7vmin;
-    text-align: right;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-  }
-
-  #info {
-    transform: scaleX(.9);
-    transform-origin: left;
-    line-height: .9;
-    font-size: 3vmin;
-    position: absolute;
-    text-align: left;
-    left: 30px;
-    top: 50vmin;
-    width: 50vmin;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  /* unvisited link */
-  a:link {
-    color: white;
-  }
-
-  /* visited link */
-  a:visited {
-    color: white;
-  }
-
-  /* mouse over link */
-  a:hover {
-    color: grey;
-  }
-
-  /* selected link */
-  a:active {
-    color: white;
-  } 
-  /* mobile screen size
-  @media (max-width: 400px) {
-    h1 {
-      font-size: 10vw;
+  <script src="tailwind.js"></script>
+  <style>
+    a:hover {
+      background-color: darkgrey;
     }
-  } */
-</style>
+    .titleContainer {
+      padding-top: 25vh;
+      margin-bottom: 15vh;
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+
+    .title {
+      font-size: 17vw;
+      line-height: 0.8;
+    }
+
+    .imgText {
+      font-size: 11vw;
+    }
+
+    .outro-text {
+      font-size: 7vw;
+      line-height: 1;
+    }
+
+    .names {
+      font-size: 5vw;
+      line-height: 0.8;
+      margin-right: 5vw;
+    }
+
+    .imgDescription {
+      font-size: 2.75vw;
+      line-height: 1.31;
+    }
+
+    .installation-carousel {
+      height: 32vw;
+      grid-auto-columns: 20vw;
+    }
+
+    @media only screen and (max-width: 640px) {
+      .titleContainer {
+        padding-top: 10vh;
+        margin-bottom: 11vh;
+      }
+
+      .title {
+        font-size: 20vw;
+      }
+
+      .names {
+        font-size: 10vw;
+        line-height: 0.8;
+        margin-right: 2vw;
+      }
+
+      .imgDescription {
+        font-size: 4vw;
+        line-height: 1;
+      }
+
+      .installation-carousel {
+        height: 50vw;
+        grid-auto-columns: 30vw;
+      }
+    }
+  </style>
+
 </head>
-<body>
-  <div>
-    <h1>KINETIC</h1>
-    <h1>DIFFUSION</h1>
-    <h2><a href="https://www.brandon-powers.com/">BRANDON POWERS</a></h2>
-    <h2><a href="https://aaron.work/">AARON SANTIAGO</a></h2>
-    <div id="dates">
-      <p><a href="https://www.eventbrite.com/e/onx-june-showcase-2023-tickets-643063338757">JUNE 7, 2023. 7PM</a></p>
-      <p><a href="https://www.eventbrite.com/e/onx-june-showcase-2023-tickets-643063338757">JUNE 9, 2023. 1PM</a></p>
-      <p><a href="https://www.eventbrite.com/e/onx-june-showcase-2023-tickets-643063338757">JUNE 11, 2023. 6PM</a></p>
-      <p><a href="mailto:creators@kineticdiffusion.com">creators@kineticdiffusion.com</a></p>
+
+<body class="bg-black text-white font-extrabold h-screen overflow-hidden"
+  style="font-family: 'Times New Roman', Times, serif;">
+  <div class="snap-mandatory snap-y h-screen overflow-scroll">
+
+
+    <div class="sm:grid sm:grid-cols-2 items-end titleContainer snap-start">
+      <div class="overflow-visible">
+        <div class="origin-top-left scale-x-75 title w-screen ">KINETIC</div>
+        <div class="origin-top-left title w-screen" style="transform: scaleX(.585);">DIFFUSION</div>
+      </div>
+      <div class="overflow-hidden text-right">
+        <div class="origin-top-right text-right names" style="width: 200%; margin-left: -100%; transform: scaleX(.62);">
+          <a href="https://www.brandon-powers.com/">BRANDON POWERS</a>
+        </div>
+        <div class="origin-top-right text-right names w-full"
+          style="width: 200%; margin-left: -100%; transform: scaleX(.65);"><a href="https://aaron.work/">AARON
+            SANTIAGO</a></div>
+      </div>
     </div>
-    <div id = "info">
-      <p>Kinetic Diffusion is a performance and interactive installation that builds on the rich history of dancers interacting with machines.</p>
-      <p>It features real-time AI generation of a solo dancer captured with a camera.</p>
-      <p>Prompts sourced from the installation guide the projections, creating a unique experience for each performance.</p>
+
+
+    <div class="sm:grid sm:grid-cols-4 snap-start" style="margin: 3vw; padding-top:4vw; gap: 3vw">
+      <div class="col-span-3">
+        <div class="relative w-full">
+          <img class="w-full" src="performance3_still.webp" />
+          <img class="absolute top-0 left-0" src="performance3_video.webp" />
+          <video class="absolute top-0 left-0" autoplay muted loop playsinline src="performance3_video.mp4"></video>
+          <!-- <div class="imgText absolute top-0 left-0 mix-blend-difference scale-x-50 h-full origin-top-left flex justify-center items-center" style="width: 200%" >PERFORMANCE</div> -->
+        </div>
+      </div>
+      <div class="my-5 sm:my-0 col-span-1">
+        <div class="imgDescription scale-x-75 origin-top-left" style="width: 133%">
+          KINETIC DIFFUSION uses AI image generation technology to transform a performer in real-time,
+          taking input from a camera, conjuring new characters across landscapes, visual
+          styles, and surreal scenes.
+        </div>
+      </div>
+    </div>
+
+    <div class="sm:grid sm:grid-cols-4 snap-start" style="margin: 3vw; padding-top:4vw; gap: 3vw">
+      <div class="col-span-3">
+        <div class="relative w-full">
+          <img class="w-full" src="performance_still.webp" />
+          <img class="absolute top-0 left-0" src="performance_video.webp" />
+          <video class="absolute top-0 left-0" autoplay muted loop playsinline src="performance_video.mp4"></video>
+          <!-- <div class="imgText absolute top-0 left-0 mix-blend-difference scale-x-50 h-full origin-top-left flex justify-center items-center" style="width: 200%" >PERFORMANCE</div> -->
+        </div>
+      </div>
+      <div class="my-5 sm:my-0 order-first col-span-1">
+        <div class="imgDescription scale-x-75 origin-top-left" style="width: 133%">
+          KINETIC DIFFUSION builds on the history of dancemakers collaborating with
+          technology by merging spectacle with education to something complex and make it embodied, dynamic, and
+          approachable.
+        </div>
+      </div>
+    </div>
+
+    <div class="sm:grid sm:grid-cols-4 snap-start" style="margin: 3vw; padding-top:4vw; gap: 3vw">
+      <div class="col-span-3">
+        <div class="relative w-full">
+          <img class="w-full" src="installation_still.webp" />
+          <img class="absolute top-0 left-0" src="installation_video.webp" />
+          <video class="absolute top-0 left-0" autoplay muted loop playsinline src="installation_video.mp4"></video>
+          <!-- <div class="imgText absolute top-0 left-0 mix-blend-difference scale-x-50 h-full origin-top-left flex justify-center items-center" style="width: 200%" >PERFORMANCE</div> -->
+        </div>
+      </div>
+      <div class="my-5 sm:my-0 col-span-1">
+        <div class="imgDescription scale-x-75 origin-top-left" style="width: 133%">
+          KINETIC DIFFUSION includes an installation that accompanies the performance. Participants can interact with
+          the technology themselves, writing prompts and exploring how movement is transformed by AI.
+        </div>
+      </div>
+    </div>
+
+    <div class="sm:grid sm:grid-cols-5 snap-start" style="margin: 3vw; padding-top:4vw; gap: 3vw">
+      <div class="col-span-4 ">
+        <div id="install-video-container" class="w-100% overflow-hidden">
+        </div>
+      </div>
+      <div class="col-span-1 imgDescription scale-x-75 origin-top-left order-first" style="width: 133%">
+        Prompts from the installation influence the prompts in the performance, creating a unique experience every time the piece is performed.
+      </div>
+    </div>
+
+    <div class="snap-start" style="margin: 5vw; margin-top: 13vw;">
+      <div class="scale-x-75 origin-top-left outro-text" style="width: 133%">
+        For information about booking, reach out to: <a href="mailto:creators@kineticdiffusion.com">creators@kineticdiffusion.com</a>
+      </div>
     </div>
   </div>
 </body>
+
+<script src="react.js"></script>
+<script src="react-dom.js"></script>
+<script src="babel.js"></script>
+
+<script type="text/babel">
+
+  let container = document.getElementById('install-video-container');
+
+  // JavaScript for auto-scrolling using requestAnimationFrame
+  let scrollPosition = 0;
+  const scrollSpeed = 1.4; // Adjust scroll speed as needed
+  let animationId; // Store the animation frame ID
+
+  function autoScroll() {
+    scrollPosition += scrollSpeed;
+    container.scrollTo(scrollPosition, 0);
+    scrollPosition %= container.scrollWidth/2;
+
+    animationId = requestAnimationFrame(autoScroll);
+  }
+
+  animationId = requestAnimationFrame(autoScroll);
+
+
+  function VideoCarousel() {
+    let videos = [];
+    for (let i = 0; i < 22; i++) {
+      videos.push("installation_videos/" + ("00" + i).slice(-2) + ".webp");
+    }
+    return (
+      <div className={"grid grid-flow-col installation-carousel"}>
+        {videos.map((v) => {
+          return (
+            <img className={"h-full"} src={v} />
+          );
+        })}
+        {videos.map((v) => {
+          return (
+            <img className={"h-full"} src={v} />
+          );
+        })}
+      </div>
+    );
+  }
+  ReactDOM.render(<VideoCarousel />, container);
+</script>
+
 </html>
