@@ -125,7 +125,7 @@
       <div class="my-5 sm:my-0 order-first col-span-1">
         <div class="imgDescription scale-x-75 origin-top-left" style="width: 133%">
           KINETIC DIFFUSION builds on the history of dancemakers collaborating with
-          technology by merging spectacle with education to something complex and make it embodied, dynamic, and
+          technology by merging spectacle with education to take something complex and make it embodied, dynamic, and
           approachable.
         </div>
       </div>
@@ -179,10 +179,19 @@
   const scrollSpeed = 1.4; // Adjust scroll speed as needed
   let animationId; // Store the animation frame ID
 
+  let lastTime = Date.now();
+
   function autoScroll() {
-    scrollPosition += scrollSpeed;
-    container.scrollTo(scrollPosition, 0);
+
+    let currentTime = Date.now();
+    let deltaTime = currentTime - lastTime;
+    lastTime = currentTime;
+
+    scrollPosition += scrollSpeed * deltaTime / 16.6;
     scrollPosition %= container.scrollWidth/2;
+    
+
+    container.scrollTo(scrollPosition, 0);
 
     animationId = requestAnimationFrame(autoScroll);
   }

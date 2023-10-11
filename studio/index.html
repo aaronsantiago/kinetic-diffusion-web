@@ -1,0 +1,245 @@
+<html>
+
+<head>
+  <title>KINETIC DIFFUSION</title>
+  <script src="/tailwind.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&display=swap" rel="stylesheet">
+  <style>
+    a:hover {
+      background-color: darkgrey;
+    }
+
+    .titleContainer {
+      padding-top: 25vh;
+      margin-bottom: 15vh;
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+
+    .title {
+      font-size: 17vw;
+      line-height: 0.8;
+    }
+
+    .imgText {
+      font-size: 11vw;
+    }
+
+    .primaryText {
+      font-size: 2.5vw;
+      padding: 12vw; 
+      padding-top: 8vw;
+      line-height: 1.3;
+    }
+
+    .names {
+      font-size: 5vw;
+      line-height: 0.8;
+      margin-right: 5vw;
+    }
+
+    .imgDescription {
+      font-size: 2.75vw;
+      line-height: 1.31;
+    }
+
+    .installation-carousel {
+      height: 32vw;
+      grid-auto-columns: 20vw;
+    }
+
+    .banner {
+      height: 10vw;
+      padding-left: 3vw;
+      padding-right: 3vw;
+    }
+
+    .featureGrid {
+      line-height: 1.2;
+       padding: 12vw;
+       padding-top: 5vw;
+       padding-bottom: 5vw;
+      font-size: 2.3vw;
+      gap: 3vw;
+      background-size: cover;
+      background-image: url(4.svg);
+      margin-top: -10vw;
+      margin-bottom: 10vw;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .titleContainer {
+        padding-top: 10vh;
+        margin-bottom: 11vh;
+      }
+      
+      .banner {
+        height: 20vw;
+      }
+
+      .title {
+        font-size: 20vw;
+      }
+
+      .names {
+        font-size: 10vw;
+        line-height: 0.8;
+        margin-right: 2vw;
+      }
+
+      .imgDescription {
+        font-size: 4vw;
+        line-height: 1;
+      }
+
+      .installation-carousel {
+        height: 50vw;
+        grid-auto-columns: 30vw;
+      }
+      .primaryText {
+        font-size: 5vw;
+        padding: 5vw; 
+        padding-top: 6vw;
+        padding-bottom: 15vw;
+      }
+
+      .featureGrid {
+        padding: 5vw;
+        font-size: 3.3vw;
+        gap: 3vw;
+        background-size: cover;
+        background-image: url(4.svg);
+      }
+
+    }
+  </style>
+
+</head>
+
+<body class="bg-black text-white h-screen overflow-hidden" style="font-family: 'Inter Tight', sans-serif;">
+  <div class="h-screen w-screen overflow-y-scroll overflow-x-hidden">
+
+    <!-- <div class="w-full sticky top-0 left-0" style="z-index: -1; height: 0;">
+      <img class="" style="width: 100vmax; height:100vmax; max-width: unset;" src="4.svg"/>
+    </div> -->
+    <div class="w-full" style="margin-top: -20vw; margin-bottom: -20vw">
+      <img class="w-full" src="6.svg" />
+    </div>
+
+
+    <div class="grid w-full grid-cols-1 grid-rows-1 gap-0 relative" style="grid-template-areas: 'inner-div';">
+      <div class="relative w-full" style="grid-area: inner-div;">
+        <img class="w-full top-0 left-0" src="install1.webp" />
+        <video class="absolute w-full top-0 left-0" autoplay muted loop playsinline src="install1.mp4"></video>
+      </div>
+      <div
+        class="absolute w-full h-full top-0 left-0 origin-top-left text-center flex justify-center items-center"
+        style="font-size: 8vw; line-height: 1;">
+        immersive experiences fueled by AI + human creativity
+      </div>
+    </div>
+
+    <div class="w-full bg-black primaryText">
+      KINETIC DIFFUSION is a creative studio building interactive experiences with
+      groundbreaking AI technology.
+    </div>
+
+    <div class="grid w-full grid-cols-1 grid-rows-1 gap-0 relative overflow-y-hidden banner"
+      style="grid-template-areas: 'inner-div';">
+      <div class="relative w-full" style="grid-area: inner-div;">
+        <img class="w-full top-0 left-0" src="install3.webp" />
+        <video class="w-full absolute top-0 left-0" autoplay muted loop playsinline src="install3.mp4"></video>
+      </div>
+      <div
+        class="absolute w-full h-full top-0 left-0 mix-blend-difference origin-top-left text-center flex justify-center items-center"
+        style="font-size: 8vw; line-height: 1; grid-area: inner-div;">
+        what we do
+      </div>
+    </div>
+
+    <div class="bg-black primaryText">
+      <div style="">We collaborate with clients to
+        create bespoke experiences that fit any space or brand. Our AI platform uses cameras + Stable Diffusion
+        to place you inside any visual dreamscape you can imagine. </div>
+    </div>
+    
+    <div class="grid grid-flow-col featureGrid" style="">
+      <div>Highly interactive & engaging immersive experience for your audience or customers</div>
+      <div>Deeply sharable personal content to make your brand or experience go viral</div>
+      <div>Cutting edge technology to place your brand at front of immersive activations</div>
+    </div>
+
+    <div class="grid w-full grid-cols-1 grid-rows-1 gap-0 relative overflow-y-hidden banner"
+      style="grid-template-areas: 'inner-div';">
+      <div class="relative w-full" style="grid-area: inner-div;">
+        <img class="w-full top-0 left-0" src="install4.webp" />
+        <video class="w-full absolute top-0 left-0" autoplay muted loop playsinline src="install4.mp4"></video>
+      </div>
+      <div
+        class="absolute w-full h-full top-0 left-0 mix-blend-difference origin-top-left text-center flex justify-center items-center"
+        style="font-size: 8vw; grid-area: inner-div;">
+        about us
+      </div>
+    </div>
+
+    <div class="primaryText">
+      <div class="origin-top-left">
+        <div>Kinetic Diffusion is creative director + choreographer Brandon Powers and creative
+        technologist Aaron Santiago.</div>
+        <div style="margin-top: 3vw;">Together, we have a unique background in experience design, performance, and technology.</div>
+        <div style="margin-top: 3vw;">Reach out: <a href="mailto:creators@kineticdiffusion.com">creators@kineticdiffusion.com</a></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="/react.js"></script>
+<script src="/react-dom.js"></script>
+<script src="/babel.js"></script>
+
+<script type="text/babel">
+
+  let container = document.getElementById('install-video-container');
+
+  // JavaScript for auto-scrolling using requestAnimationFrame
+  let scrollPosition = 0;
+  const scrollSpeed = 1.4; // Adjust scroll speed as needed
+  let animationId; // Store the animation frame ID
+
+  function autoScroll() {
+    scrollPosition += scrollSpeed;
+    container.scrollTo(scrollPosition, 0);
+    scrollPosition %= container.scrollWidth / 2;
+
+    animationId = requestAnimationFrame(autoScroll);
+  }
+
+  animationId = requestAnimationFrame(autoScroll);
+
+
+  function VideoCarousel() {
+    let videos = [];
+    for (let i = 0; i < 22; i++) {
+      videos.push("installation_videos/" + ("00" + i).slice(-2) + ".webp");
+    }
+    return (
+      <div className={"grid grid-flow-col installation-carousel"}>
+        {videos.map((v) => {
+          return (
+            <img className={"h-full"} src={v} />
+          );
+        })}
+        {videos.map((v) => {
+          return (
+            <img className={"h-full"} src={v} />
+          );
+        })}
+      </div>
+    );
+  }
+  ReactDOM.render(<VideoCarousel />, container);
+</script>
+
+</html>
