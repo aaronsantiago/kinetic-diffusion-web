@@ -1,0 +1,112 @@
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Varta&display=swap" rel="stylesheet">  
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+  }
+
+  #videoContainer {
+    width: 100vw;
+    height: auto;
+  }
+
+  #overlay {
+    text-shadow: 0px 0px 4px black;
+    font-size: 10vw;
+    -webkit-text-stroke: .02em black;
+    color: white;
+    font-family: 'Six Caps', sans-serif;
+    /* transform: scaleX(.585); */
+    transform-origin: 0 0;
+    text-transform: uppercase;
+    text-align: center;
+/* loop fade in animation */
+    animation: fadein 1.5s infinite;
+    padding-top: 2vw;
+  }
+
+  @media (min-aspect-ratio: 9/16) {
+    #videoContainer {
+      width: auto;
+      height: 100vh;
+    }
+
+    #overlay {
+      padding-top: 1vh;
+      font-size: 6vh;
+    }
+  }
+
+  /* fading animation */
+
+  @keyframes fadein {
+    0%   { opacity:1; }
+    50%  { opacity:0.5; }
+    100% { opacity:1; }
+  }
+</style>
+<div style="text-align: center; margin: 0; padding: 0; overflow: hidden;" onclick="shareFile();">
+  <div id="" style="display: flex; width: fill-available; height: fill-available; align-items: center; justify-content: center;">
+    <div id="videoContainer" style="background-color: black; text-align: left; aspect-ratio: 1080/1920; max-width: 100%; max-height: 100%;">
+      
+      <video id="video" autoplay playsinline muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-width: 100%; max-height: 100%;">
+      </video>
+      <div id="overlay" style="position: relative;">
+        Tap anywhere to share or download
+      </div>
+    </div>
+    
+  </div>
+</div>
+<script>
+  let videoEl = document.getElementById("video");
+  let videoId = (new URLSearchParams(window.location.search)).get("v");
+
+  let videoFilename = "https://videos.kineticdiffusion.com/file/kinetic-diffusion-videos/" + videoId + ".mp4";
+  console.log(videoFilename)
+  videoEl.src = videoFilename;
+  let file = null;
+  let fileLoaded = false;
+  let shareQueued = false;
+  (async () => {
+    file = await fetch(videoFilename);
+    file = await file.blob();
+    file = new File([file], videoId + ".mp4", {
+      type: "video/mp4"
+    })
+    fileLoaded = true;
+    if (shareQueued) {
+      shareFile();
+    }
+  })()
+  function shareFile() {
+    if (fileLoaded == false) {
+      shareQueued = true;
+      return;
+    }
+    try {
+      navigator.share({
+        files: [file]
+      })
+        .then(() => document.getElementById("debug").innerHTML = 'Share was successful.')
+        .catch((error) => document.getElementById("debug").innerHTML = 'Sharing failed ' + error.message);
+    }
+    catch (err) {
+      // download the file
+      var a = document.createElement("a");
+      document.body.appendChild(a);
+      a.style = "display: none";
+      var url = window.URL.createObjectURL(file);
+      a.href = url;
+      a.download = file.name;
+      a.click();
+    }
+  }
+</script>
+
+</html>
